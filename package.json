@@ -1,0 +1,16 @@
+{
+  "name": "echo",
+  "version": "1.0.0",
+  "description": "By Nico \\ Nxrd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nxrd",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "file-system": "^2.2.2",
+    "ms": "^2.1.1"
+  }
+}
