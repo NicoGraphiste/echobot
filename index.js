@@ -4,7 +4,7 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-fs.readdir(".echobot/commands/", (err, files) => {
+fs.readdir("./commands/", (err, files) => {
 
   if(err) console.log(err);
 
@@ -15,7 +15,7 @@ fs.readdir(".echobot/commands/", (err, files) => {
   }
 
   jsfile.forEach((f, i) =>{
-    let props = require(`.echobot/commands/${f}`);
+    let props = require(`./commands/${f}`);
     console.log(`Lanceur système : ${f} Charger !`);
     bot.commands.set(props.help.name, props);
   });
