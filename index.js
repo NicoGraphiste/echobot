@@ -48,7 +48,7 @@ bot.on("message", async message => {
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
     message.delete();
-    message.reply("Veuillez attendre 5 secondes avant de faire une autre commande, s'il vous plaît.")
+   return message.reply("Veuillez attendre 5 secondes avant de faire une autre commande, s'il vous plaît.")
   }
   //if(!message.member.hasPermission("ADMINISTRATOR")){
     cooldown.add(message.author.id);
