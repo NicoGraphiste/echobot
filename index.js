@@ -37,10 +37,6 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
-  
-bot.on("message", async message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") return;
     let xpAdd = Math.floor(Math.random() * 7) + 8;
   console.log(xpAdd);
 
