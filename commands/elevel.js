@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
-const botconfig = require("../botconfig");
-let xp = require("../xp.json");
+const botconfig = require("./botconfig");
+let xp = require("./xp.json");
 
 module.exports.run = async (bot, message, args) => {
 
@@ -22,7 +22,7 @@ let elvlEmbed = new Discord.RichEmbed()
 .addField("XP", curxp, true)
 .addFooter(`${difference} Xp jusqu'au niveau supérieur`, message.author.displayAvatarURL);
 
-message.channel.send(elvlEmbed).then(msg => {msg.delete(5000)});
+return message.channel.send(elvlEmbed).then(msg => {msg.delete(5000)});
 
 
 }
