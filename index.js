@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
+let xp = require("./xp.json");
 let cooldown = new Set();
 let cdsecondes = 5;
 
