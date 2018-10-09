@@ -31,7 +31,6 @@ bot.on("ready", async () => {
 
   bot.user.setActivity("Développement Nico", {type: "WATCHING"});
 
-  bot.user.setGame("Développement Nico !");
 });
 
 bot.on("message", async message => {
