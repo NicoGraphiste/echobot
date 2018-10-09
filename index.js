@@ -26,13 +26,29 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 
-bot.on("ready", async () => {
-  console.log(`Lanceur Echo : ${bot.user.username} est allumé sur ${bot.guilds.size} serveurs !`);
+//bot.on("ready", async () => {
+  //console.log(`Lanceur Echo : ${bot.user.username} est allumé sur ${bot.guilds.size} serveurs !`);
 
-  bot.user.setActivity("Développement Nico", {type: "WATCHING"});
+  //bot.user.setActivity("Développement Nico", {type: "WATCHING"});
 
   //bot.user.setGame("Développement Nico !");
-});
+//});
+
+let statuses = ['Support : https://discord.gg/bCpvc7g', 'e!help for help !', 'Nico and Axerty'];
+bot.on('allumé', () => {
+
+  setInterval(function() {
+
+    let status = statuses[Math.floor(Math.random()*statuses.length)];
+
+    bot.user.setPresence({ game: { name: status }, status: 'online'});
+
+    bot.user.setPresence({ activity: { name: status }, status: 'online'});
+
+  }, 10000)
+
+})
+
 
 bot.on("message", async message => {
   if(message.author.bot) return;
